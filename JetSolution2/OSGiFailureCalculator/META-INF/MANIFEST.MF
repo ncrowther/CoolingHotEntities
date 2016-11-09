@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: OSGiFailureCalculator
+Bundle-SymbolicName: OSGiFailureCalculator
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: bin
+Export-Package: spss.api
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: entityModel,
+ spss.api
+Bundle-Blueprint: OSGI-INF/blueprint/*.xml

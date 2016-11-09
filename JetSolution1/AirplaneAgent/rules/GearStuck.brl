@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>GearStuck</name>
+  <uuid>999ddeee-3d37-40e7-9eb4-fef30a1bd3e0</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[when an airplane event occurs
+if
+    the gear state of the gear of this airplane event is STUCK
+then
+    print "Actionable Event for " + the aircraft id ;
+    emit a new actionable event where
+        the operator action is GEAR_WARNING ,
+        the reason is "Gear stuck on " + the aircraft id ,
+        the aircraft id is the aircraft id of this airplane event ,
+        the timestamp is now ;
+        
+    set the gear warnings of 'the airplane' to the gear warnings of 'the airplane' + 1 ;]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

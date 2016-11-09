@@ -1,2 +1,1 @@
-# CoolingHotEntities
-Cool down your hot entities with IBM Decision Server Insights
+This project contains all three projects for the "Cooling your Hot Entities Paper"

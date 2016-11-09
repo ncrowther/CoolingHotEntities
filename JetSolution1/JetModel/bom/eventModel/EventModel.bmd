@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessModelDefinition>
+    <Bmd><![CDATA[/****************** Engine Summary Event ******************/
+an actionable event is a business event time-stamped by a timestamp ( date & time ) .
+an actionable event has an operator action .
+an actionable event has an aircraft id .
+an actionable event has a reason .
+
+a operator action can be one of :
+    ENGINE_ERROR, GEAR_WARNING, COCKPIT_WARNING, WING_WARNING, FUSELAGE_WARNING.
+    
+/****************** Airplane Event ******************/
+an airplane event is a business event time-stamped by a timestamp ( date & time ) .
+an airplane event has an aircraft id .
+an airplane event has an engine . 
+an airplane event has a wing . 
+an airplane event has a gear .
+an airplane event has a cockpit .
+an airplane event has a fuselage .
+
+a wing is a concept  .
+a wing has a lift ( integer ) .
+
+a fuselage is a concept.
+a fuselage has a pressure ( integer ) .
+
+a cockpit is a concept .
+a cockpit has a altitude ( integer ) .
+a cockpit has a speed ( integer ) .
+
+a gear is a concept .
+a gear  has a gear state ( a gear status ).
+
+a engine is a concept .
+an engine has a pressure ratio ( integer ) .
+an engine has a rpm ( integer ) .
+an engine has a exhaust temperature ( integer ) .
+
+a gear status can be one of: UP, DOWN, STUCK.
+]]></Bmd>
+    <Bmi><![CDATA[an airplane is initialized from an airplane event , where this airplane comes from the aircraft id of this airplane event : 
+	- set the average engine exhaust temperature of this airplane to the exhaust temperature of the engine of this airplane event  
+	- set the average engine pressure ratio of this airplane to the pressure ratio of the engine of this airplane event     
+    - set the average engine rpm of this airplane to the rpm of the engine of this airplane event .   ]]></Bmi>
+</BusinessModelDefinition>

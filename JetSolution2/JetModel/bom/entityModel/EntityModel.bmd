@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessModelDefinition>
+    <Bmd><![CDATA[/****** Engine Entity  ******/
+an engine is a business entity identified by an engine id .
+an engine has an average exhaust temperature (integer ) . 
+an engine has an average pressure ratio (integer ) .
+an engine has an average rpm (integer ) .
+an engine has an event count (integer ) .
+
+an wing is a business entity identified by an wing id .
+an wing has a warning count (integer ) .  
+
+a cockpit is a business entity identified by an cockpit id .
+an cockpit has a warning count (integer ) . 
+
+an fuselage is a business entity identified by an fuselage id .
+an fuselage has a warning count (integer ) . 
+
+an gear is a business entity identified by an gear id .
+an gear has a warning count (integer ) . ]]></Bmd>
+</BusinessModelDefinition>

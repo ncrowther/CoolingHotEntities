@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>EngineShutdown</name>
+  <uuid>63c7f642-d6f1-4024-83fc-f0622b23bd77</uuid>
+  <documentation><![CDATA[when an airplane event occurs 
+    
+if
+    calculate engine failure probability ( the engine warnings of 'the airplane',
+                             the pressure ratio of the engine of this airplane event  , 
+                             the rpm of the engine of this airplane event  ) is more than 3
+then
+    
+    emit a new actionable event where
+        the operator action is ENGINE_ERROR   ,
+        the reason is "Engine Failing on " + the aircraft id,
+        the aircraft id is the aircraft id of this airplane event  ,
+        the timestamp is now ;
+        
+     set the engine warnings of 'the airplane' to 0;]]></documentation>
+  <priority>low</priority>
+  <locale>en_US</locale>
+  <definition><![CDATA[when an airplane event occurs
+if
+    calculate engine failure probability ( the average engine exhaust temperature of 'the airplane'    , 
+                                           the average engine pressure ratio of 'the airplane' ,  
+                                           the average engine rpm of 'the airplane' ) is more than 8
+then
+    
+    emit a new actionable event where
+        the operator action is ENGINE_ERROR   ,
+        the reason is "Engine Failing on " + the aircraft id,
+        the aircraft id is the aircraft id of this airplane event   ,
+        the timestamp is now ;]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

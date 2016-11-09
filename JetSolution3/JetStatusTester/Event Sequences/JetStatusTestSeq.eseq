@@ -1,0 +1,62 @@
+define engineEvent1 as a new engine event where
+	the aircraft id is "A123456" , 
+	the engine clone id is "Clone1"  , 
+	the engine id is "E123456"  , 
+	the exhaust temperature is 800  , 
+	the pressure ratio is 6  ,
+	the rpm is 2000   ;
+
+define engineEvent2 as a new engine event where
+	the aircraft id is "A123456" , 
+	the engine clone id is "Clone2"  , 
+	the engine id is "E123456"  , 
+	the exhaust temperature is 800  , 
+	the pressure ratio is 6  ,
+	the rpm is 2000   ;
+	
+define engineEvent3 as a new engine event where
+	the aircraft id is "A123456" , 
+	the engine clone id is "Clone1"  , 
+	the engine id is "E123456"  , 
+	the exhaust temperature is 800  , 
+	the pressure ratio is 6  ,
+	the rpm is 2000   ;
+	
+define engineEvent4 as a new engine event where
+	the aircraft id is "A123456" , 
+	the engine clone id is "Clone2"  , 
+	the engine id is "E123456"  , 
+	the exhaust temperature is 800  , 
+	the pressure ratio is 6  ,
+	the rpm is 2000   ;
+	
+define wingEvent as a new wing event where
+	the aircraft id is "A123456",
+	the wing id is "W232", 
+    the lift is 102;
+   
+define gearEvent as a new gear event where
+	the aircraft id is "A123456",
+	the gear id is "G232", 
+    the gear state is STUCK;
+    
+define fuselageEvent as a new fuselage event where
+	the aircraft id is "A123456",
+	the fuselage id is "F232", 
+    the pressure is 6;    
+    
+define cockpitEvent as a new cockpit event where
+	the aircraft id is "A123456",
+	the cockpit id is "C123456",
+	the altitude is 1200  ,
+	 the speed is 900; 
+
+emit engineEvent1 , time-stamped 10/25/2016 ;
+emit engineEvent2 , time-stamped 10/25/2016 ;
+emit engineEvent3 , time-stamped 10/25/2016 ;
+emit engineEvent4 , time-stamped 10/25/2016 ;
+
+emit wingEvent , time-stamped 10/25/2016 ;
+emit gearEvent , time-stamped 10/25/2016 ;
+emit fuselageEvent , time-stamped 10/25/2016 ;
+emit cockpitEvent , time-stamped 10/25/2016 ;

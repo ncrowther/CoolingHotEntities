@@ -1,0 +1,406 @@
+property uuid "78960dae-af73-4f79-a7bb-8e105aea298f"
+property bdl_generated "true"
+package entityModel;
+
+
+public class Cockpit
+        implements com.ibm.ia.model.Entity
+        property "de.generated" "true"
+{
+    public string cockpitId
+                property "ia.entity.id" "true"
+                property update "true";
+    public int warningCount
+                property update "true";
+    public Cockpit(string cockpitId)
+                property "dataio.default" "true";
+    public Cockpit(string cockpitId, int warningCount)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class Engine
+        implements com.ibm.ia.model.Entity
+        property "de.generated" "true"
+{
+    public int averageExhaustTemperature
+                property update "true";
+    public int averagePressureRatio
+                property update "true";
+    public int averageRpm
+                property update "true";
+    public string engineId
+                property "ia.entity.id" "true"
+                property update "true";
+    public int eventCount
+                property update "true";
+    public Engine(string engineId)
+                property "dataio.default" "true";
+    public Engine(int averageExhaustTemperature, int averagePressureRatio, int averageRpm, string engineId, int eventCount)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class EngineClone
+        implements com.ibm.ia.model.Entity
+        property "de.generated" "true"
+{
+    public string aircraftId
+                property update "true";
+    public int averageExhaustTemperature
+                property update "true";
+    public int averagePressureRatio
+                property update "true";
+    public int averageRpm
+                property update "true";
+    public string engineCloneId
+                property "ia.entity.id" "true"
+                property update "true";
+    public string engineId
+                property update "true";
+    public int eventCount
+                property update "true";
+    public boolean timerRunning
+                property update "true";
+    public EngineClone(string engineCloneId)
+                property "dataio.default" "true";
+    public EngineClone(string aircraftId, 
+        int averageExhaustTemperature, 
+        int averagePressureRatio, 
+        int averageRpm, 
+        string engineCloneId, 
+        string engineId, 
+        int eventCount, 
+        boolean timerRunning)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class Fuselage
+        implements com.ibm.ia.model.Entity
+        property "de.generated" "true"
+{
+    public string fuselageId
+                property "ia.entity.id" "true"
+                property update "true";
+    public int warningCount
+                property update "true";
+    public Fuselage(string fuselageId)
+                property "dataio.default" "true";
+    public Fuselage(string fuselageId, int warningCount)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class Gear
+        implements com.ibm.ia.model.Entity
+        property "de.generated" "true"
+{
+    public string gearId
+                property "ia.entity.id" "true"
+                property update "true";
+    public int warningCount
+                property update "true";
+    public Gear(string gearId)
+                property "dataio.default" "true";
+    public Gear(string gearId, int warningCount)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class Wing
+        implements com.ibm.ia.model.Entity
+        property "de.generated" "true"
+{
+    public int warningCount
+                property update "true";
+    public string wingId
+                property "ia.entity.id" "true"
+                property update "true";
+    public Wing(string wingId)
+                property "dataio.default" "true";
+    public Wing(int warningCount, string wingId)
+                property groups "BALA"
+                property prototype "true";
+}
+
+package eventModel;
+
+
+public class ActionableEvent
+        implements com.ibm.ia.model.Event
+        property "brl.facets" "ilog.rules.brl.Date:timestamp"
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "ActionableEvent"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/JetModel/model"
+{
+    public string aircraftId
+                property "xsd.name" "aircraftId"
+                property "xsd.order" "0";
+    public eventModel.OperatorAction operatorAction
+                property "xsd.name" "operatorAction"
+                property "xsd.order" "1";
+    public string reason
+                property "xsd.name" "reason"
+                property "xsd.order" "2";
+    public java.time.ZonedDateTime timestamp
+                property "ia.timestamp" "true"
+                property "xsd.name" "timestamp"
+                property "xsd.order" "3";
+    public ActionableEvent(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public ActionableEvent(string aircraftId, eventModel.OperatorAction operatorAction, string reason, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class CockpitEvent
+        implements com.ibm.ia.model.Event
+        property "brl.facets" "ilog.rules.brl.Date:timestamp"
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "CockpitEvent"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/JetModel/model"
+{
+    public string aircraftId
+                property "xsd.name" "aircraftId"
+                property "xsd.order" "0";
+    public int altitude
+                property "xsd.name" "altitude"
+                property "xsd.order" "1";
+    public string cockpitId
+                property "xsd.name" "cockpitId"
+                property "xsd.order" "2";
+    public int speed
+                property "xsd.name" "speed"
+                property "xsd.order" "3";
+    public java.time.ZonedDateTime timestamp
+                property "ia.timestamp" "true"
+                property "xsd.name" "timestamp"
+                property "xsd.order" "4";
+    public CockpitEvent(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public CockpitEvent(string aircraftId, int altitude, string cockpitId, int speed, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class EngineEvent
+        implements com.ibm.ia.model.Event
+        property "brl.facets" "ilog.rules.brl.Date:timestamp"
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "EngineEvent"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/JetModel/model"
+{
+    public string aircraftId
+                property "xsd.name" "aircraftId"
+                property "xsd.order" "0";
+    public string engineCloneId
+                property "xsd.name" "engineCloneId"
+                property "xsd.order" "1";
+    public string engineId
+                property "xsd.name" "engineId"
+                property "xsd.order" "2";
+    public int exhaustTemperature
+                property "xsd.name" "exhaustTemperature"
+                property "xsd.order" "3";
+    public int pressureRatio
+                property "xsd.name" "pressureRatio"
+                property "xsd.order" "4";
+    public int rpm
+                property "xsd.name" "rpm"
+                property "xsd.order" "5";
+    public java.time.ZonedDateTime timestamp
+                property "ia.timestamp" "true"
+                property "xsd.name" "timestamp"
+                property "xsd.order" "6";
+    public EngineEvent(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public EngineEvent(string aircraftId, string engineCloneId, string engineId, int exhaustTemperature, int pressureRatio, int rpm, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class EngineSummaryEvent
+        implements com.ibm.ia.model.Event
+        property "brl.facets" "ilog.rules.brl.Date:timestamp"
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "EngineSummaryEvent"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/JetModel/model"
+{
+    public string aircraftId
+                property "xsd.name" "aircraftId"
+                property "xsd.order" "0";
+    public int averageExhaustTemperature
+                property "xsd.name" "averageExhaustTemperature"
+                property "xsd.order" "1";
+    public int averagePressureRatio
+                property "xsd.name" "averagePressureRatio"
+                property "xsd.order" "2";
+    public int averageRpm
+                property "xsd.name" "averageRpm"
+                property "xsd.order" "3";
+    public string engineId
+                property "xsd.name" "engineId"
+                property "xsd.order" "4";
+    public int eventCount
+                property "xsd.name" "eventCount"
+                property "xsd.order" "5";
+    public java.time.ZonedDateTime timestamp
+                property "ia.timestamp" "true"
+                property "xsd.name" "timestamp"
+                property "xsd.order" "6";
+    public EngineSummaryEvent(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public EngineSummaryEvent(string aircraftId, int averageExhaustTemperature, int averagePressureRatio, int averageRpm, string engineId, int eventCount, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class FuselageEvent
+        implements com.ibm.ia.model.Event
+        property "brl.facets" "ilog.rules.brl.Date:timestamp"
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "FuselageEvent"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/JetModel/model"
+{
+    public string aircraftId
+                property "xsd.name" "aircraftId"
+                property "xsd.order" "0";
+    public string fuselageId
+                property "xsd.name" "fuselageId"
+                property "xsd.order" "1";
+    public int pressure
+                property "xsd.name" "pressure"
+                property "xsd.order" "2";
+    public java.time.ZonedDateTime timestamp
+                property "ia.timestamp" "true"
+                property "xsd.name" "timestamp"
+                property "xsd.order" "3";
+    public FuselageEvent(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public FuselageEvent(string aircraftId, string fuselageId, int pressure, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class GearEvent
+        implements com.ibm.ia.model.Event
+        property "brl.facets" "ilog.rules.brl.Date:timestamp"
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "GearEvent"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/JetModel/model"
+{
+    public string aircraftId
+                property "xsd.name" "aircraftId"
+                property "xsd.order" "0";
+    public string gearId
+                property "xsd.name" "gearId"
+                property "xsd.order" "1";
+    public eventModel.GearStatus gearState
+                property "xsd.name" "gearState"
+                property "xsd.order" "2";
+    public java.time.ZonedDateTime timestamp
+                property "ia.timestamp" "true"
+                property "xsd.name" "timestamp"
+                property "xsd.order" "3";
+    public GearEvent(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public GearEvent(string aircraftId, string gearId, eventModel.GearStatus gearState, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class GearStatus
+        property "de.generated" "true"
+        property "ia.enum" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/JetModel/model"
+{
+    domain {static UP, static DOWN, static STUCK}
+    public static final readonly eventModel.GearStatus DOWN
+                property "xsd.name" "DOWN"
+                property "xsd.order" "0";
+    public static final readonly eventModel.GearStatus STUCK
+                property "xsd.name" "STUCK"
+                property "xsd.order" "1";
+    public static final readonly eventModel.GearStatus UP
+                property "xsd.name" "UP"
+                property "xsd.order" "2";
+}
+
+public class OperatorAction
+        property "de.generated" "true"
+        property "ia.enum" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/JetModel/model"
+{
+    domain {static ENGINE_ERROR, static GEAR_WARNING, static COCKPIT_WARNING, static WING_WARNING, static FUSELAGE_WARNING}
+    public static final readonly eventModel.OperatorAction COCKPIT_WARNING
+                property "xsd.name" "COCKPIT_WARNING"
+                property "xsd.order" "0";
+    public static final readonly eventModel.OperatorAction ENGINE_ERROR
+                property "xsd.name" "ENGINE_ERROR"
+                property "xsd.order" "1";
+    public static final readonly eventModel.OperatorAction FUSELAGE_WARNING
+                property "xsd.name" "FUSELAGE_WARNING"
+                property "xsd.order" "2";
+    public static final readonly eventModel.OperatorAction GEAR_WARNING
+                property "xsd.name" "GEAR_WARNING"
+                property "xsd.order" "3";
+    public static final readonly eventModel.OperatorAction WING_WARNING
+                property "xsd.name" "WING_WARNING"
+                property "xsd.order" "4";
+}
+
+public class WingEvent
+        implements com.ibm.ia.model.Event
+        property "brl.facets" "ilog.rules.brl.Date:timestamp"
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "WingEvent"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/JetModel/model"
+{
+    public string aircraftId
+                property "xsd.name" "aircraftId"
+                property "xsd.order" "0";
+    public int lift
+                property "xsd.name" "lift"
+                property "xsd.order" "1";
+    public java.time.ZonedDateTime timestamp
+                property "ia.timestamp" "true"
+                property "xsd.name" "timestamp"
+                property "xsd.order" "2";
+    public string wingId
+                property "xsd.name" "wingId"
+                property "xsd.order" "3";
+    public WingEvent(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public WingEvent(string aircraftId, int lift, java.time.ZonedDateTime timestamp, string wingId)
+                property groups "BALA"
+                property prototype "true";
+}
+

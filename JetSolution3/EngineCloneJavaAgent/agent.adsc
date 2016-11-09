@@ -1,0 +1,3 @@
+'jetsolution.engineclonejavaagent.EngineCloneJavaAgent' is an agent related to an engine clone  , 
+processing events : 
+    - engine event  , where this engine clone  comes from the engine clone id of this engine event 

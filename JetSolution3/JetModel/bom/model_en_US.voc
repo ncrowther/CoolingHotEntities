@@ -1,0 +1,174 @@
+uuid = 01781d46-92ac-4ee3-81a8-ff3d1ab85c33
+# entityModel.Cockpit
+entityModel.Cockpit#concept.label = cockpit
+entityModel.Cockpit.Cockpit(java.lang.String,int)#phrase.navigation = a new {cockpit} where {0, cockpit id} {1, warning count} 
+entityModel.Cockpit.cockpitId#phrase.navigation = {cockpit id} of {this}
+entityModel.Cockpit.warningCount#phrase.action = set the warning count of {this} to {warning count}
+entityModel.Cockpit.warningCount#phrase.navigation = {warning count} of {this}
+
+# entityModel.Engine
+entityModel.Engine#concept.label = engine
+entityModel.Engine.Engine(int,int,int,java.lang.String,int)#phrase.navigation = a new {engine} where {0, average exhaust temperature} {1, average pressure ratio} {2, average rpm} {3, engine id} {4, event count} 
+entityModel.Engine.averageExhaustTemperature#phrase.action = set the average exhaust temperature of {this} to {average exhaust temperature}
+entityModel.Engine.averageExhaustTemperature#phrase.navigation = {average exhaust temperature} of {this}
+entityModel.Engine.averagePressureRatio#phrase.action = set the average pressure ratio of {this} to {average pressure ratio}
+entityModel.Engine.averagePressureRatio#phrase.navigation = {average pressure ratio} of {this}
+entityModel.Engine.averageRpm#phrase.action = set the average rpm of {this} to {average rpm}
+entityModel.Engine.averageRpm#phrase.navigation = {average rpm} of {this}
+entityModel.Engine.engineId#phrase.navigation = {engine id} of {this}
+entityModel.Engine.eventCount#phrase.action = set the event count of {this} to {event count}
+entityModel.Engine.eventCount#phrase.navigation = {event count} of {this}
+
+# entityModel.EngineClone
+entityModel.EngineClone#concept.label = engine clone
+entityModel.EngineClone.EngineClone(java.lang.String,int,int,int,java.lang.String,java.lang.String,int,boolean)#phrase.navigation = a new {engine clone} where {0, aircraft id} {1, average exhaust temperature} {2, average pressure ratio} {3, average rpm} {4, engine clone id} {5, engine id} {6, event count} {7, timer running} 
+entityModel.EngineClone.aircraftId#phrase.action = set the aircraft id of {this} to {aircraft id}
+entityModel.EngineClone.aircraftId#phrase.navigation = {aircraft id} of {this}
+entityModel.EngineClone.averageExhaustTemperature#phrase.action = set the average exhaust temperature of {this} to {average exhaust temperature}
+entityModel.EngineClone.averageExhaustTemperature#phrase.navigation = {average exhaust temperature} of {this}
+entityModel.EngineClone.averagePressureRatio#phrase.action = set the average pressure ratio of {this} to {average pressure ratio}
+entityModel.EngineClone.averagePressureRatio#phrase.navigation = {average pressure ratio} of {this}
+entityModel.EngineClone.averageRpm#phrase.action = set the average rpm of {this} to {average rpm}
+entityModel.EngineClone.averageRpm#phrase.navigation = {average rpm} of {this}
+entityModel.EngineClone.engineCloneId#phrase.navigation = {engine clone id} of {this}
+entityModel.EngineClone.engineId#phrase.action = set the engine id of {this} to {engine id}
+entityModel.EngineClone.engineId#phrase.navigation = {engine id} of {this}
+entityModel.EngineClone.eventCount#phrase.action = set the event count of {this} to {event count}
+entityModel.EngineClone.eventCount#phrase.navigation = {event count} of {this}
+entityModel.EngineClone.timerRunning#phrase.action = make it {timer running} that {this} is timer running
+entityModel.EngineClone.timerRunning#phrase.navigation = {this} is timer running
+
+# entityModel.Fuselage
+entityModel.Fuselage#concept.label = fuselage
+entityModel.Fuselage.Fuselage(java.lang.String,int)#phrase.navigation = a new {fuselage} where {0, fuselage id} {1, warning count} 
+entityModel.Fuselage.fuselageId#phrase.navigation = {fuselage id} of {this}
+entityModel.Fuselage.warningCount#phrase.action = set the warning count of {this} to {warning count}
+entityModel.Fuselage.warningCount#phrase.navigation = {warning count} of {this}
+
+# entityModel.Gear
+entityModel.Gear#concept.label = gear
+entityModel.Gear.Gear(java.lang.String,int)#phrase.navigation = a new {gear} where {0, gear id} {1, warning count} 
+entityModel.Gear.gearId#phrase.navigation = {gear id} of {this}
+entityModel.Gear.warningCount#phrase.action = set the warning count of {this} to {warning count}
+entityModel.Gear.warningCount#phrase.navigation = {warning count} of {this}
+
+# entityModel.Wing
+entityModel.Wing#concept.label = wing
+entityModel.Wing.Wing(int,java.lang.String)#phrase.navigation = a new {wing} where {0, warning count} {1, wing id} 
+entityModel.Wing.warningCount#phrase.action = set the warning count of {this} to {warning count}
+entityModel.Wing.warningCount#phrase.navigation = {warning count} of {this}
+entityModel.Wing.wingId#phrase.navigation = {wing id} of {this}
+
+# eventModel.ActionableEvent
+eventModel.ActionableEvent#concept.label = actionable event
+eventModel.ActionableEvent.ActionableEvent(java.lang.String,eventModel.OperatorAction,java.lang.String,java.time.ZonedDateTime)#phrase.navigation = a new {actionable event} where {0, aircraft id} {1, operator action} {2, reason} {3, timestamp} 
+eventModel.ActionableEvent.aircraftId#phrase.action = set the aircraft id of {this} to {aircraft id}
+eventModel.ActionableEvent.aircraftId#phrase.navigation = {aircraft id} of {this}
+eventModel.ActionableEvent.operatorAction#phrase.action = set the operator action of {this} to {operator action}
+eventModel.ActionableEvent.operatorAction#phrase.clearer = clear the operator action of {this}
+eventModel.ActionableEvent.operatorAction#phrase.navigation = {operator action} of {this}
+eventModel.ActionableEvent.reason#phrase.action = set the reason of {this} to {reason}
+eventModel.ActionableEvent.reason#phrase.navigation = {reason} of {this}
+eventModel.ActionableEvent.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+eventModel.ActionableEvent.timestamp#phrase.navigation = {timestamp} of {this}
+
+# eventModel.CockpitEvent
+eventModel.CockpitEvent#concept.label = cockpit event
+eventModel.CockpitEvent.CockpitEvent(java.lang.String,int,java.lang.String,int,java.time.ZonedDateTime)#phrase.navigation = a new {cockpit event} where {0, aircraft id} {1, altitude} {2, cockpit id} {3, speed} {4, timestamp} 
+eventModel.CockpitEvent.aircraftId#phrase.action = set the aircraft id of {this} to {aircraft id}
+eventModel.CockpitEvent.aircraftId#phrase.navigation = {aircraft id} of {this}
+eventModel.CockpitEvent.altitude#phrase.action = set the altitude of {this} to {altitude}
+eventModel.CockpitEvent.altitude#phrase.navigation = {altitude} of {this}
+eventModel.CockpitEvent.cockpitId#phrase.action = set the cockpit id of {this} to {cockpit id}
+eventModel.CockpitEvent.cockpitId#phrase.navigation = {cockpit id} of {this}
+eventModel.CockpitEvent.speed#phrase.action = set the speed of {this} to {speed}
+eventModel.CockpitEvent.speed#phrase.navigation = {speed} of {this}
+eventModel.CockpitEvent.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+eventModel.CockpitEvent.timestamp#phrase.navigation = {timestamp} of {this}
+
+# eventModel.EngineEvent
+eventModel.EngineEvent#concept.label = engine event
+eventModel.EngineEvent.EngineEvent(java.lang.String,java.lang.String,java.lang.String,int,int,int,java.time.ZonedDateTime)#phrase.navigation = a new {engine event} where {0, aircraft id} {1, engine clone id} {2, engine id} {3, exhaust temperature} {4, pressure ratio} {5, rpm} {6, timestamp} 
+eventModel.EngineEvent.aircraftId#phrase.action = set the aircraft id of {this} to {aircraft id}
+eventModel.EngineEvent.aircraftId#phrase.navigation = {aircraft id} of {this}
+eventModel.EngineEvent.engineCloneId#phrase.action = set the engine clone id of {this} to {engine clone id}
+eventModel.EngineEvent.engineCloneId#phrase.navigation = {engine clone id} of {this}
+eventModel.EngineEvent.engineId#phrase.action = set the engine id of {this} to {engine id}
+eventModel.EngineEvent.engineId#phrase.navigation = {engine id} of {this}
+eventModel.EngineEvent.exhaustTemperature#phrase.action = set the exhaust temperature of {this} to {exhaust temperature}
+eventModel.EngineEvent.exhaustTemperature#phrase.navigation = {exhaust temperature} of {this}
+eventModel.EngineEvent.pressureRatio#phrase.action = set the pressure ratio of {this} to {pressure ratio}
+eventModel.EngineEvent.pressureRatio#phrase.navigation = {pressure ratio} of {this}
+eventModel.EngineEvent.rpm#phrase.action = set the rpm of {this} to {rpm}
+eventModel.EngineEvent.rpm#phrase.navigation = {rpm} of {this}
+eventModel.EngineEvent.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+eventModel.EngineEvent.timestamp#phrase.navigation = {timestamp} of {this}
+
+# eventModel.EngineSummaryEvent
+eventModel.EngineSummaryEvent#concept.label = engine summary event
+eventModel.EngineSummaryEvent.EngineSummaryEvent(java.lang.String,int,int,int,java.lang.String,int,java.time.ZonedDateTime)#phrase.navigation = a new {engine summary event} where {0, aircraft id} {1, average exhaust temperature} {2, average pressure ratio} {3, average rpm} {4, engine id} {5, event count} {6, timestamp} 
+eventModel.EngineSummaryEvent.aircraftId#phrase.action = set the aircraft id of {this} to {aircraft id}
+eventModel.EngineSummaryEvent.aircraftId#phrase.navigation = {aircraft id} of {this}
+eventModel.EngineSummaryEvent.averageExhaustTemperature#phrase.action = set the average exhaust temperature of {this} to {average exhaust temperature}
+eventModel.EngineSummaryEvent.averageExhaustTemperature#phrase.navigation = {average exhaust temperature} of {this}
+eventModel.EngineSummaryEvent.averagePressureRatio#phrase.action = set the average pressure ratio of {this} to {average pressure ratio}
+eventModel.EngineSummaryEvent.averagePressureRatio#phrase.navigation = {average pressure ratio} of {this}
+eventModel.EngineSummaryEvent.averageRpm#phrase.action = set the average rpm of {this} to {average rpm}
+eventModel.EngineSummaryEvent.averageRpm#phrase.navigation = {average rpm} of {this}
+eventModel.EngineSummaryEvent.engineId#phrase.action = set the engine id of {this} to {engine id}
+eventModel.EngineSummaryEvent.engineId#phrase.navigation = {engine id} of {this}
+eventModel.EngineSummaryEvent.eventCount#phrase.action = set the event count of {this} to {event count}
+eventModel.EngineSummaryEvent.eventCount#phrase.navigation = {event count} of {this}
+eventModel.EngineSummaryEvent.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+eventModel.EngineSummaryEvent.timestamp#phrase.navigation = {timestamp} of {this}
+
+# eventModel.FuselageEvent
+eventModel.FuselageEvent#concept.label = fuselage event
+eventModel.FuselageEvent.FuselageEvent(java.lang.String,java.lang.String,int,java.time.ZonedDateTime)#phrase.navigation = a new {fuselage event} where {0, aircraft id} {1, fuselage id} {2, pressure} {3, timestamp} 
+eventModel.FuselageEvent.aircraftId#phrase.action = set the aircraft id of {this} to {aircraft id}
+eventModel.FuselageEvent.aircraftId#phrase.navigation = {aircraft id} of {this}
+eventModel.FuselageEvent.fuselageId#phrase.action = set the fuselage id of {this} to {fuselage id}
+eventModel.FuselageEvent.fuselageId#phrase.navigation = {fuselage id} of {this}
+eventModel.FuselageEvent.pressure#phrase.action = set the pressure of {this} to {pressure}
+eventModel.FuselageEvent.pressure#phrase.navigation = {pressure} of {this}
+eventModel.FuselageEvent.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+eventModel.FuselageEvent.timestamp#phrase.navigation = {timestamp} of {this}
+
+# eventModel.GearEvent
+eventModel.GearEvent#concept.label = gear event
+eventModel.GearEvent.GearEvent(java.lang.String,java.lang.String,eventModel.GearStatus,java.time.ZonedDateTime)#phrase.navigation = a new {gear event} where {0, aircraft id} {1, gear id} {2, gear state} {3, timestamp} 
+eventModel.GearEvent.aircraftId#phrase.action = set the aircraft id of {this} to {aircraft id}
+eventModel.GearEvent.aircraftId#phrase.navigation = {aircraft id} of {this}
+eventModel.GearEvent.gearId#phrase.action = set the gear id of {this} to {gear id}
+eventModel.GearEvent.gearId#phrase.navigation = {gear id} of {this}
+eventModel.GearEvent.gearState#phrase.action = set the gear state of {this} to {gear state}
+eventModel.GearEvent.gearState#phrase.clearer = clear the gear state of {this}
+eventModel.GearEvent.gearState#phrase.navigation = {gear state} of {this}
+eventModel.GearEvent.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+eventModel.GearEvent.timestamp#phrase.navigation = {timestamp} of {this}
+
+# eventModel.GearStatus
+eventModel.GearStatus#concept.label = gear status
+eventModel.GearStatus.DOWN#instance.label = DOWN
+eventModel.GearStatus.STUCK#instance.label = STUCK
+eventModel.GearStatus.UP#instance.label = UP
+
+# eventModel.OperatorAction
+eventModel.OperatorAction#concept.label = operator action
+eventModel.OperatorAction.COCKPIT_WARNING#instance.label = COCKPIT_WARNING
+eventModel.OperatorAction.ENGINE_ERROR#instance.label = ENGINE_ERROR
+eventModel.OperatorAction.FUSELAGE_WARNING#instance.label = FUSELAGE_WARNING
+eventModel.OperatorAction.GEAR_WARNING#instance.label = GEAR_WARNING
+eventModel.OperatorAction.WING_WARNING#instance.label = WING_WARNING
+
+# eventModel.WingEvent
+eventModel.WingEvent#concept.label = wing event
+eventModel.WingEvent.WingEvent(java.lang.String,int,java.time.ZonedDateTime,java.lang.String)#phrase.navigation = a new {wing event} where {0, aircraft id} {1, lift} {2, timestamp} {3, wing id} 
+eventModel.WingEvent.aircraftId#phrase.action = set the aircraft id of {this} to {aircraft id}
+eventModel.WingEvent.aircraftId#phrase.navigation = {aircraft id} of {this}
+eventModel.WingEvent.lift#phrase.action = set the lift of {this} to {lift}
+eventModel.WingEvent.lift#phrase.navigation = {lift} of {this}
+eventModel.WingEvent.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+eventModel.WingEvent.timestamp#phrase.navigation = {timestamp} of {this}
+eventModel.WingEvent.wingId#phrase.action = set the wing id of {this} to {wing id}
+eventModel.WingEvent.wingId#phrase.navigation = {wing id} of {this}

@@ -1,0 +1,10 @@
+define inbound binding 'jetEventsBinding'
+    using
+            message format application/xml,
+            protocol HTTP ,
+    accepting any event .
+    
+    define inbound HTTP endpoint 'InboundHttpEndpoint'
+    using 
+		binding 'jetEventsBinding' , url path "/jetstatus/InboundHttpEndpoint" .
+   

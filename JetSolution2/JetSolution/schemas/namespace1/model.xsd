@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" targetNamespace="http://www.ibm.com/ia/xmlns/default/JetModel/model" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:m="http://www.ibm.com/ia/xmlns/default/JetModel/model"
+>
+
+    <element name="ActionableEvent" type="m:ActionableEvent"/>
+    <complexType name="ActionableEvent">
+        <annotation>
+            <appinfo source="http://www.ibm.com/ia/Annotation">
+                <event elementName="ActionableEvent"/>
+            </appinfo>
+        </annotation>
+        <sequence>
+            <element name="aircraftId" type="string">
+            </element>
+            <element name="operatorAction" type="m:OperatorAction">
+            </element>
+            <element name="reason" type="string">
+            </element>
+            <element name="timestamp" type="dateTime">
+                <annotation>
+                    <appinfo source="http://www.ibm.com/ia/Annotation">
+                        <timestamp/>
+                    </appinfo>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+
+    <element name="CockpitEvent" type="m:CockpitEvent"/>
+    <complexType name="CockpitEvent">
+        <annotation>
+            <appinfo source="http://www.ibm.com/ia/Annotation">
+                <event elementName="CockpitEvent"/>
+            </appinfo>
+        </annotation>
+        <sequence>
+            <element name="aircraftId" type="string">
+            </element>
+            <element name="altitude" type="int">
+            </element>
+            <element name="cockpitId" type="string">
+            </element>
+            <element name="speed" type="int">
+            </element>
+            <element name="timestamp" type="dateTime">
+                <annotation>
+                    <appinfo source="http://www.ibm.com/ia/Annotation">
+                        <timestamp/>
+                    </appinfo>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+
+    <element name="EngineEvent" type="m:EngineEvent"/>
+    <complexType name="EngineEvent">
+        <annotation>
+            <appinfo source="http://www.ibm.com/ia/Annotation">
+                <event elementName="EngineEvent"/>
+            </appinfo>
+        </annotation>
+        <sequence>
+            <element name="aircraftId" type="string">
+            </element>
+            <element name="engineId" type="string">
+            </element>
+            <element name="exhaustTemperature" type="int">
+            </element>
+            <element name="pressureRatio" type="int">
+            </element>
+            <element name="rpm" type="int">
+            </element>
+            <element name="timestamp" type="dateTime">
+                <annotation>
+                    <appinfo source="http://www.ibm.com/ia/Annotation">
+                        <timestamp/>
+                    </appinfo>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+
+    <element name="FuselageEvent" type="m:FuselageEvent"/>
+    <complexType name="FuselageEvent">
+        <annotation>
+            <appinfo source="http://www.ibm.com/ia/Annotation">
+                <event elementName="FuselageEvent"/>
+            </appinfo>
+        </annotation>
+        <sequence>
+            <element name="aircraftId" type="string">
+            </element>
+            <element name="fuselageId" type="string">
+            </element>
+            <element name="pressure" type="int">
+            </element>
+            <element name="timestamp" type="dateTime">
+                <annotation>
+                    <appinfo source="http://www.ibm.com/ia/Annotation">
+                        <timestamp/>
+                    </appinfo>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+
+    <element name="GearEvent" type="m:GearEvent"/>
+    <complexType name="GearEvent">
+        <annotation>
+            <appinfo source="http://www.ibm.com/ia/Annotation">
+                <event elementName="GearEvent"/>
+            </appinfo>
+        </annotation>
+        <sequence>
+            <element name="aircraftId" type="string">
+            </element>
+            <element name="gearId" type="string">
+            </element>
+            <element name="gearState" type="m:GearStatus">
+            </element>
+            <element name="timestamp" type="dateTime">
+                <annotation>
+                    <appinfo source="http://www.ibm.com/ia/Annotation">
+                        <timestamp/>
+                    </appinfo>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+    <element name="GearStatus" type="m:GearStatus"/>
+    <simpleType name="GearStatus">
+        <restriction base="string">
+            <enumeration value="UP"/>
+            <enumeration value="DOWN"/>
+            <enumeration value="STUCK"/>
+        </restriction>
+    </simpleType>
+    <element name="OperatorAction" type="m:OperatorAction"/>
+    <simpleType name="OperatorAction">
+        <restriction base="string">
+            <enumeration value="ENGINE_ERROR"/>
+            <enumeration value="GEAR_WARNING"/>
+            <enumeration value="COCKPIT_WARNING"/>
+            <enumeration value="WING_WARNING"/>
+            <enumeration value="FUSELAGE_WARNING"/>
+        </restriction>
+    </simpleType>
+
+    <element name="WingEvent" type="m:WingEvent"/>
+    <complexType name="WingEvent">
+        <annotation>
+            <appinfo source="http://www.ibm.com/ia/Annotation">
+                <event elementName="WingEvent"/>
+            </appinfo>
+        </annotation>
+        <sequence>
+            <element name="aircraftId" type="string">
+            </element>
+            <element name="lift" type="int">
+            </element>
+            <element name="timestamp" type="dateTime">
+                <annotation>
+                    <appinfo source="http://www.ibm.com/ia/Annotation">
+                        <timestamp/>
+                    </appinfo>
+                </annotation>
+            </element>
+            <element name="wingId" type="string">
+            </element>
+        </sequence>
+    </complexType>
+
+</schema>

@@ -1,0 +1,13 @@
+
+property loadGetterSetterAsProperties "true"
+property origin "xom:/FailureServiceOsgiBom//OSGiFailureCalculator"
+property uuid "c04b6d7e-bdef-4135-bea0-97fca9429381"
+package spss.api;
+
+
+public interface SpssUtilService
+        property "OSGi.service" "spss.api.SpssUtilService"
+{
+    public static int calculateEngineFailure(int temp, int pressureRatio, int rpm);
+}
+

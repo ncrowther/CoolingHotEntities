@@ -1,0 +1,108 @@
+uuid = 01781d46-92ac-4ee3-81a8-ff3d1ab85c33
+# entityModel.Airplane
+entityModel.Airplane#concept.label = airplane
+entityModel.Airplane.Airplane(java.lang.String,int,int,int,int,int,int,int,int)#phrase.navigation = a new {airplane} where {0, airplane id} {1, average engine exhaust temperature} {2, average engine pressure ratio} {3, average engine rpm} {4, cockpit warnings} {5, event count} {6, fuselage warnings} {7, gear warnings} {8, wing warnings} 
+entityModel.Airplane.airplaneId#phrase.navigation = {airplane id} of {this}
+entityModel.Airplane.averageEngineExhaustTemperature#phrase.action = set the average engine exhaust temperature of {this} to {average engine exhaust temperature}
+entityModel.Airplane.averageEngineExhaustTemperature#phrase.navigation = {average engine exhaust temperature} of {this}
+entityModel.Airplane.averageEnginePressureRatio#phrase.action = set the average engine pressure ratio of {this} to {average engine pressure ratio}
+entityModel.Airplane.averageEnginePressureRatio#phrase.navigation = {average engine pressure ratio} of {this}
+entityModel.Airplane.averageEngineRpm#phrase.action = set the average engine rpm of {this} to {average engine rpm}
+entityModel.Airplane.averageEngineRpm#phrase.navigation = {average engine rpm} of {this}
+entityModel.Airplane.cockpitWarnings#phrase.action = set the cockpit warnings of {this} to {cockpit warnings}
+entityModel.Airplane.cockpitWarnings#phrase.navigation = {cockpit warnings} of {this}
+entityModel.Airplane.eventCount#phrase.action = set the event count of {this} to {event count}
+entityModel.Airplane.eventCount#phrase.navigation = {event count} of {this}
+entityModel.Airplane.fuselageWarnings#phrase.action = set the fuselage warnings of {this} to {fuselage warnings}
+entityModel.Airplane.fuselageWarnings#phrase.navigation = {fuselage warnings} of {this}
+entityModel.Airplane.gearWarnings#phrase.action = set the gear warnings of {this} to {gear warnings}
+entityModel.Airplane.gearWarnings#phrase.navigation = {gear warnings} of {this}
+entityModel.Airplane.wingWarnings#phrase.action = set the wing warnings of {this} to {wing warnings}
+entityModel.Airplane.wingWarnings#phrase.navigation = {wing warnings} of {this}
+
+# eventModel.ActionableEvent
+eventModel.ActionableEvent#concept.label = actionable event
+eventModel.ActionableEvent.ActionableEvent(java.lang.String,eventModel.OperatorAction,java.lang.String,java.time.ZonedDateTime)#phrase.navigation = a new {actionable event} where {0, aircraft id} {1, operator action} {2, reason} {3, timestamp} 
+eventModel.ActionableEvent.aircraftId#phrase.action = set the aircraft id of {this} to {aircraft id}
+eventModel.ActionableEvent.aircraftId#phrase.navigation = {aircraft id} of {this}
+eventModel.ActionableEvent.operatorAction#phrase.action = set the operator action of {this} to {operator action}
+eventModel.ActionableEvent.operatorAction#phrase.clearer = clear the operator action of {this}
+eventModel.ActionableEvent.operatorAction#phrase.navigation = {operator action} of {this}
+eventModel.ActionableEvent.reason#phrase.action = set the reason of {this} to {reason}
+eventModel.ActionableEvent.reason#phrase.navigation = {reason} of {this}
+eventModel.ActionableEvent.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+eventModel.ActionableEvent.timestamp#phrase.navigation = {timestamp} of {this}
+
+# eventModel.AirplaneEvent
+eventModel.AirplaneEvent#concept.label = airplane event
+eventModel.AirplaneEvent.AirplaneEvent(java.lang.String,eventModel.Cockpit,eventModel.Engine,eventModel.Fuselage,eventModel.Gear,java.time.ZonedDateTime,eventModel.Wing)#phrase.navigation = a new {airplane event} where {0, aircraft id} {1, cockpit} {2, engine} {3, fuselage} {4, gear} {5, timestamp} {6, wing} 
+eventModel.AirplaneEvent.aircraftId#phrase.action = set the aircraft id of {this} to {aircraft id}
+eventModel.AirplaneEvent.aircraftId#phrase.navigation = {aircraft id} of {this}
+eventModel.AirplaneEvent.cockpit#phrase.action = set the cockpit of {this} to {cockpit}
+eventModel.AirplaneEvent.cockpit#phrase.clearer = clear the cockpit of {this}
+eventModel.AirplaneEvent.cockpit#phrase.navigation = {cockpit} of {this}
+eventModel.AirplaneEvent.engine#phrase.action = set the engine of {this} to {engine}
+eventModel.AirplaneEvent.engine#phrase.clearer = clear the engine of {this}
+eventModel.AirplaneEvent.engine#phrase.navigation = {engine} of {this}
+eventModel.AirplaneEvent.fuselage#phrase.action = set the fuselage of {this} to {fuselage}
+eventModel.AirplaneEvent.fuselage#phrase.clearer = clear the fuselage of {this}
+eventModel.AirplaneEvent.fuselage#phrase.navigation = {fuselage} of {this}
+eventModel.AirplaneEvent.gear#phrase.action = set the gear of {this} to {gear}
+eventModel.AirplaneEvent.gear#phrase.clearer = clear the gear of {this}
+eventModel.AirplaneEvent.gear#phrase.navigation = {gear} of {this}
+eventModel.AirplaneEvent.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+eventModel.AirplaneEvent.timestamp#phrase.navigation = {timestamp} of {this}
+eventModel.AirplaneEvent.wing#phrase.action = set the wing of {this} to {wing}
+eventModel.AirplaneEvent.wing#phrase.clearer = clear the wing of {this}
+eventModel.AirplaneEvent.wing#phrase.navigation = {wing} of {this}
+
+# eventModel.Cockpit
+eventModel.Cockpit#concept.label = cockpit
+eventModel.Cockpit.Cockpit(int,int)#phrase.navigation = a new {cockpit} where {0, altitude} {1, speed} 
+eventModel.Cockpit.altitude#phrase.action = set the altitude of {this} to {altitude}
+eventModel.Cockpit.altitude#phrase.navigation = {altitude} of {this}
+eventModel.Cockpit.speed#phrase.action = set the speed of {this} to {speed}
+eventModel.Cockpit.speed#phrase.navigation = {speed} of {this}
+
+# eventModel.Engine
+eventModel.Engine#concept.label = engine
+eventModel.Engine.Engine(int,int,int)#phrase.navigation = a new {engine} where {0, exhaust temperature} {1, pressure ratio} {2, rpm} 
+eventModel.Engine.exhaustTemperature#phrase.action = set the exhaust temperature of {this} to {exhaust temperature}
+eventModel.Engine.exhaustTemperature#phrase.navigation = {exhaust temperature} of {this}
+eventModel.Engine.pressureRatio#phrase.action = set the pressure ratio of {this} to {pressure ratio}
+eventModel.Engine.pressureRatio#phrase.navigation = {pressure ratio} of {this}
+eventModel.Engine.rpm#phrase.action = set the rpm of {this} to {rpm}
+eventModel.Engine.rpm#phrase.navigation = {rpm} of {this}
+
+# eventModel.Fuselage
+eventModel.Fuselage#concept.label = fuselage
+eventModel.Fuselage.Fuselage(int)#phrase.navigation = a new {fuselage} where {0, pressure} 
+eventModel.Fuselage.pressure#phrase.action = set the pressure of {this} to {pressure}
+eventModel.Fuselage.pressure#phrase.navigation = {pressure} of {this}
+
+# eventModel.Gear
+eventModel.Gear#concept.label = gear
+eventModel.Gear.Gear(eventModel.GearStatus)#phrase.navigation = a new {gear} where {0, gear state} 
+eventModel.Gear.gearState#phrase.action = set the gear state of {this} to {gear state}
+eventModel.Gear.gearState#phrase.clearer = clear the gear state of {this}
+eventModel.Gear.gearState#phrase.navigation = {gear state} of {this}
+
+# eventModel.GearStatus
+eventModel.GearStatus#concept.label = gear status
+eventModel.GearStatus.DOWN#instance.label = DOWN
+eventModel.GearStatus.STUCK#instance.label = STUCK
+eventModel.GearStatus.UP#instance.label = UP
+
+# eventModel.OperatorAction
+eventModel.OperatorAction#concept.label = operator action
+eventModel.OperatorAction.COCKPIT_WARNING#instance.label = COCKPIT_WARNING
+eventModel.OperatorAction.ENGINE_ERROR#instance.label = ENGINE_ERROR
+eventModel.OperatorAction.FUSELAGE_WARNING#instance.label = FUSELAGE_WARNING
+eventModel.OperatorAction.GEAR_WARNING#instance.label = GEAR_WARNING
+eventModel.OperatorAction.WING_WARNING#instance.label = WING_WARNING
+
+# eventModel.Wing
+eventModel.Wing#concept.label = wing
+eventModel.Wing.Wing(int)#phrase.navigation = a new {wing} where {0, lift} 
+eventModel.Wing.lift#phrase.action = set the lift of {this} to {lift}
+eventModel.Wing.lift#phrase.navigation = {lift} of {this}

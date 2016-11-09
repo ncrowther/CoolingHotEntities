@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessModelDefinition>
+    <Bmd><![CDATA[/****** Airplane Entity ******/
+an airplane is a business entity identified by an airplane id .
+an airplane has an average engine exhaust temperature (integer ) . 
+an airplane has an average engine pressure ratio (integer ) .
+an airplane has an average engine rpm (integer ) .
+an airplane has an wing warnings (integer ) . 
+an airplane has an cockpit warnings (integer ) . 
+an airplane has an fuselage warnings (integer ) . 
+an airplane has an gear warnings (integer ) . 
+an airplane has an event count (integer ) .
+
+]]></Bmd>
+</BusinessModelDefinition>

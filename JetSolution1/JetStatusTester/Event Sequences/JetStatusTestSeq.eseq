@@ -1,0 +1,29 @@
+define engine1 as a new engine where
+    the exhaust temperature is 800 ,
+    the pressure ratio is 7 ,
+    the rpm is 2000 ;
+
+define wing as a new wing where
+    the lift is 109 ;
+
+define gear as a new gear where
+    the gear state is STUCK  ;
+
+define fuselage as a new fuselage where
+	the pressure is 6 ;   
+        
+define cockpit as a new cockpit where
+	the altitude is 1200  ,
+	 the speed is 900;
+	 
+define airplaneEvent1 as a new airplane event where
+    the aircraft id is "A123456" ,
+    the engine is engine1, 
+    the wing is wing ,
+    the fuselage is fuselage,
+    the cockpit is cockpit ,
+    the gear is  gear ;
+    
+emit airplaneEvent1 , time-stamped 10/13/2016 ;
+
+

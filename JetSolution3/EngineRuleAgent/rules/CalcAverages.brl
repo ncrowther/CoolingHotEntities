@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>CalcAverages</name>
+  <uuid>d9535d96-0182-45f2-876d-8c2caca39041</uuid>
+  <documentation><![CDATA[an engine has a vibration warnings ( integer ) .
+an engine has a engine_pressure_warnings ( integer ) .
+an engine has a engine_pressure_ratio ( integer ) .
+an engine has a turbine_rpm ( integer ) .
+an engine has a exhaust_gas_temperature ( integer ) ]]></documentation>
+  <priority>high</priority>
+  <locale>en_US</locale>
+  <definition><![CDATA[when an engine summary event occurs
+then
+    define rpmAverage as ( the average rpm of 'the engine' + the average rpm of this engine summary event ) / 2 ;
+    define pressureAverage as ( the average pressure ratio of 'the engine' + the average pressure ratio of this engine summary event ) / 2 ;
+    define exhaustTempAverage as ( the average exhaust temperature of 'the engine' + the average exhaust temperature of this engine summary event ) / 2 ;
+    
+    set the average rpm of 'the engine' to rpmAverage ;
+    set the average pressure ratio of 'the engine' to pressureAverage ;
+    set the average exhaust temperature of 'the engine' to exhaustTempAverage ;
+    set the event count of 'the engine' to the event count of 'the engine' + the event count of this engine summary event ;]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

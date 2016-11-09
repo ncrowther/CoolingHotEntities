@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessModelDefinition>
+    <Bmd><![CDATA[/****************** Engine Summary Event ******************/
+an actionable event is a business event time-stamped by a timestamp ( date & time ) .
+an actionable event has an operator action .
+an actionable event has an aircraft id .
+an actionable event has a reason .
+
+a operator action can be one of :
+    ENGINE_ERROR, GEAR_WARNING, COCKPIT_WARNING, WING_WARNING, FUSELAGE_WARNING.
+    
+/****************** Airplane Events ******************/
+a wing event is a business event time-stamped by a timestamp ( date & time ) .
+a wing event has a wing id.
+a wing event has an aircraft id .
+a wing event has a lift ( integer ) .
+
+a fuselage event is a business event time-stamped by a timestamp ( date & time ) .
+a fuselage event has a fuselage id.
+a fuselage event has an aircraft id .
+a fuselage event has a pressure ( integer ) .
+
+a cockpit event is a business event time-stamped by a timestamp ( date & time ) .
+a cockpit event has a cockpit id.
+a cockpit event has an aircraft id .
+a cockpit event has a altitude ( integer ) .
+a cockpit event has a speed ( integer ) .
+
+a gear event is a business event time-stamped by a timestamp ( date & time ) .
+a gear event has a gear id.
+a gear event has an aircraft id .
+a gear event has a gear state ( a gear status ).
+
+an engine event is a business event time-stamped by a timestamp ( date & time ) .
+an engine event has an engine id.
+an engine event has an engine clone id.
+an engine event has an aircraft id .
+an engine event has a pressure ratio ( integer ) .
+an engine event has a rpm ( integer ) .
+an engine event has a exhaust temperature ( integer ) .
+
+/****************** Engine Event ******************/
+an engine summary event is a business event time-stamped by a timestamp ( date & time ) .
+an engine summary event  has an aircraft id .
+an engine summary event has an engine id.
+an engine summary event has a average exhaust temperature ( integer ) .
+an engine summary event has an average pressure ratio (integer ) .
+an engine summary event has an average rpm (integer ) .
+an engine summary event has an event count (integer ) .
+
+a gear status can be one of: UP, DOWN, STUCK.
+
+]]></Bmd>
+    <Bmi><![CDATA[an engine is initialized from an engine summary event , where this engine comes from the engine id of this engine summary event :
+	- set the average exhaust temperature of this engine to the average exhaust temperature of this engine summary event  
+	- set the average pressure ratio of this engine to the average pressure ratio of this engine summary event 
+	- set the average rpm of this engine to the average rpm of this engine summary event .   
+	
+a cockpit is initialized from a cockpit event , where this cockpit comes from the cockpit id of this cockpit event .
+a wing is initialized from a wing event , where this wing comes from the wing id of this wing event .
+a fuselage is initialized from a fuselage event , where this fuselage comes from the fuselage id of this fuselage event .
+a gear is initialized from a gear event , where this gear comes from the gear id of this gear event .
+
+]]></Bmi>
+</BusinessModelDefinition>

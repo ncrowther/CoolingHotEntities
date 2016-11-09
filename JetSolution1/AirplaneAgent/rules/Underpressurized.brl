@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>Underpressurized</name>
+  <uuid>945acc73-0b0f-4ff2-8b83-d3d8a5b7872d</uuid>
+  <documentation><![CDATA[an engine has a vibration warnings ( integer ) .
+an engine has a engine_pressure_warnings ( integer ) .
+an engine has a engine_pressure_ratio ( integer ) .
+an engine has a turbine_rpm ( integer ) .
+an engine has a exhaust_gas_temperature ( integer ) ]]></documentation>
+  <priority>high</priority>
+  <locale>en_US</locale>
+  <definition><![CDATA[when an airplane event occurs
+if
+    the pressure of the fuselage of this airplane event is less than 10
+then
+    emit a new actionable event where
+        the operator action is FUSELAGE_WARNING ,
+        the reason is "Fuselage underpressurized " + the aircraft id ,
+        the aircraft id is the aircraft id of this airplane event ,
+        the timestamp is now ;
+        
+    set the fuselage warnings of 'the airplane' to the fuselage warnings of 'the airplane' + 1 ;]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

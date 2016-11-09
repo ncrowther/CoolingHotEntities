@@ -1,0 +1,6 @@
+# Vocabulary Properties
+uuid = d53c0c10-e77b-489d-80c1-752f7f90e766
+
+# spss.api.SpssUtilService
+spss.api.SpssUtilService#concept.label = spss util service
+spss.api.SpssUtilService.calculateEngineFailure(int,int,int)#phrase.navigation = calculate engine failure probability({0}, {1}, {2})
